@@ -15,7 +15,8 @@
 
 `default_nettype none
 
-`include "example_por.v"
+`include "comparator.v"
+`include "comparator_bias.v"
 
 /*
  * I/O mapping for analog
