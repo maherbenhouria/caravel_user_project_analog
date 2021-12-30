@@ -1,18 +1,19 @@
-# Caravel Analog User
+# CMOS Rail-To-Rail Comparator
+This project is the implementation of a simple rail-to-rail comparator with its bias circuitry using Skywater 130nm technology.
+The purpose of this project is to test the open source tools provided with the PDK and to go through all the steps of the analog design flow.
+Two different circuits are instantiated in the analog version of the caravel:
+- A CMOS push-pull comparator with 2 differential pairs (NMOS and PMOS).
+- A bootstrap current reference.
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![CI](https://github.com/efabless/caravel_user_project_analog/actions/workflows/user_project_ci.yml/badge.svg)](https://github.com/efabless/caravel_user_project_analog/actions/workflows/user_project_ci.yml) [![Caravan Build](https://github.com/efabless/caravel_user_project_analog/actions/workflows/caravan_build.yml/badge.svg)](https://github.com/efabless/caravel_user_project_analog/actions/workflows/caravan_build.yml)
+## CMOS Comparator
+The schematic of the comparator was deisgned as follows :
+![Comparator](./docs/comparator.png)
 
----
+## Bias circuit
+The schematic of the bias circuit was deisgned as follows :
+![Comparator Bias](./docs/comparator_bias.png)
 
-| :exclamation: Important Note            |
-|-----------------------------------------|
+## Simulation
+We simulated the comparator with a voltage ramp at the negative input and a sinusoidal signal at the positive input. The output is a digital signal that triggers at the intersection of the 2 analog input signals.
+![Simulation](./docs/sim_result.png)
 
-## Please fill in your project documentation in this README.md file 
-
-
-:warning: | Use this sample project for analog user projects. 
-:---: | :---
-
----
-
-Refer to [README](docs/source/index.rst) for this sample project documentation. 
